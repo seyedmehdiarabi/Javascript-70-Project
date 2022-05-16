@@ -1,0 +1,177 @@
+@font-face {
+    font-family: 'vazir';
+    src: url('../fonts/vazir.eot');
+    src: url('../fonts/vazir.ttf') format('truetype'), url('../fonts/vazir.woff2') format('woff2'), url('../fonts/vazir.woff') format('woff');
+}
+
+:root {
+    --bodyColor: #ffffff;
+    --mainColor: #ffffff;
+    --primaryColor: #151729;
+    --secondaryColor: #777;
+    --blackColor: #000000;
+    --lienerGradient: linear-gradient(90deg, #c50707, #faa000);
+    --transitionLiener: all .4s liner;
+    --transitionEasein: all .4s ease-in-out;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    direction: rtl;
+    font-family: 'vazir';
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: var( --mainColor);
+}
+
+.fullPageMenu {
+    position: fixed;
+    top: -100%;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: #111;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row-reverse;
+    transition: var(--transitionEasein);
+    -webkit-transition: var(--transitionEasein);
+    -moz-transition: var(--transitionEasein);
+    -ms-transition: var(--transitionEasein);
+    -o-transition: var(--transitionEasein);
+}
+
+.fullPageMenu.acvite {
+    top: 0;
+}
+
+.fullPageMenu .banner {
+    min-width: 600px;
+    height: 100%;
+    position: relative;
+}
+
+.fullPageMenu .banner img {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.fullPageMenu .nav {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.fullPageMenu .nav ul {
+    position: relative;
+}
+
+.fullPageMenu .nav ul li {
+    position: relative;
+    padding: 0 20px;
+    margin: 5px 0;
+    overflow: hidden;
+}
+
+.fullPageMenu .nav ul li::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: #a80e2f;
+    transform: scaleY(0);
+    -webkit-transform: scaleY(0);
+    -moz-transform: scaleY(0);
+    -ms-transform: scaleY(0);
+    -o-transform: scaleY(0);
+    transition: var(--transitionEasein);
+    -webkit-transition: var(--transitionEasein);
+    -moz-transition: var(--transitionEasein);
+    -ms-transition: var(--transitionEasein);
+    -o-transition: var(--transitionEasein);
+    transform-origin: bottom;
+}
+
+.fullPageMenu .nav ul li:hover::before {
+    transform: scaleY(1);
+    -webkit-transform: scaleY(1);
+    -moz-transform: scaleY(1);
+    -ms-transform: scaleY(1);
+    -o-transform: scaleY(1);
+    transform-origin: top;
+}
+
+.fullPageMenu .nav ul li a {
+    position: relative;
+    color: var(--mainColor);
+    font-size: 3.1rem;
+    font-weight: 700;
+    line-height: 5rem;
+    padding-top: 12px;
+    display: block;
+    transition: var(--transitionEasein);
+    -webkit-transition: var(--transitionEasein);
+    -moz-transition: var(--transitionEasein);
+    -ms-transition: var(--transitionEasein);
+    -o-transition: var(--transitionEasein);
+}
+
+.fullPageMenu .nav ul li a::before {
+    content: attr(data-text);
+    position: absolute;
+    bottom: -100%;
+    right: 0;
+    color: var(--mainColor);
+}
+
+.fullPageMenu .nav ul li:hover a {
+    transform: translateY(-100%);
+    -webkit-transform: translateY(-100%);
+    -moz-transform: translateY(-100%);
+    -ms-transform: translateY(-100%);
+    -o-transform: translateY(-100%);
+}
+
+.menu-icon {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    background: #ffffff url(../img/1.png) no-repeat center;
+    background-size: 40px;
+    cursor: pointer;
+    transition: var(--transitionLiener);
+    -webkit-transition: var(--transitionLiener);
+    -moz-transition: var(--transitionLiener);
+    -ms-transition: var(--transitionLiener);
+    -o-transition: var(--transitionLiener);
+}
+
+.menu-icon.active {
+    background: #ffffff url(../img/close.png) no-repeat center;
+    background-size: cover;
+}
