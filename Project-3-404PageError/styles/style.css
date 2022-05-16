@@ -1,0 +1,82 @@
+@font-face {
+    font-family: 'vazir';
+    src: url('../fonts/vazir.eot');
+    src: url('../fonts/vazir.ttf') format('truetype'), url('../fonts/vazir.woff2') format('woff2'), url('../fonts/vazir.woff') format('woff');
+}
+
+:root {
+    --bodyColor: #ffffff;
+    --mainColor: #ffffff;
+    --primaryColor: #151729;
+    --secondaryColor: #777;
+    --blackColor: #000000;
+    --transitionLiener: all .4s liner;
+    --transitionEasein: all .4s ease-in-out;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    direction: rtl;
+    font-family: 'vazir';
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: var( --bodyColor);
+}
+
+#container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--primaryColor);
+    background-image: url(../img//p404.png);
+}
+
+#container .content {
+    width: 600px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#container .content h2 {
+    font-size: 20rem;
+    color: var(--mainColor);
+}
+
+#container .content h4 {
+    font-size: 3rem;
+    color: var(--mainColor);
+    margin-top: -130px;
+    position: relative;
+}
+
+#container .content p {
+    font-size: 1.2rem;
+    color: var(--mainColor);
+    margin: 25px 0;
+}
+
+#container .content a {
+    color: var(--mainColor);
+    background-color: #8500ff;
+    padding: 10px 20px;
+    border-radius: 25px;
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    -ms-border-radius: 25px;
+    -o-border-radius: 25px;
+}

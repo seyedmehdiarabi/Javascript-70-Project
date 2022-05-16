@@ -1,0 +1,85 @@
+@font-face {
+    font-family: 'vazir';
+    src: url('../fonts/vazir.eot');
+    src: url('../fonts/vazir.ttf') format('truetype'), url('../fonts/vazir.woff2') format('woff2'), url('../fonts/vazir.woff') format('woff');
+}
+
+:root {
+    --bodyColor: #ffffff;
+    --mainColor: #ffffff;
+    --primaryColor: #151729;
+    --secondaryColor: #777;
+    --blackColor: #000000;
+    --lienerGradient: linear-gradient(90deg, #c50707, #faa000);
+    --transitionLiener: all .4s liner;
+    --transitionEasein: all .4s ease-in-out;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    direction: rtl;
+    font-family: 'vazir';
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: var( --lienerGradient);
+}
+
+.search {
+    height: 50px;
+    position: relative;
+}
+
+.search input {
+    font-family: "vazir";
+    font-size: 1.2rem;
+    padding: 5px 10px;
+    box-sizing: initial;
+    height: 50px;
+    width: 20px;
+    border: none;
+    transition: width .4s ease;
+    -webkit-transition: width .4s ease;
+    -moz-transition: width .4s ease;
+    -ms-transition: width .4s ease;
+    -o-transition: width .4s ease;
+}
+
+.search.active .input {
+    width: 300px;
+}
+
+.search .btn {
+    padding: 15px;
+    border: none;
+    background: var(--mainColor);
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+    transition: right .4s ease;
+    -webkit-transition: right .4s ease;
+    -moz-transition: right .4s ease;
+    -ms-transition: right .4s ease;
+    -o-transition: right .4s ease;
+    font-size: 1.5rem;
+}
+
+.search.active .btn {
+    right: 300px;
+}
