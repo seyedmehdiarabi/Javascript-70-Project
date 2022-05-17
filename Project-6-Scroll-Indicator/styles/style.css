@@ -1,0 +1,71 @@
+@font-face {
+    font-family: 'vazir';
+    src: url('../fonts/vazir.eot');
+    src: url('../fonts/vazir.ttf') format('truetype'), url('../fonts/vazir.woff2') format('woff2'), url('../fonts/vazir.woff') format('woff');
+}
+
+:root {
+    --bodyColor: #ffffff;
+    --mainColor: #ffffff;
+    --primaryColor: #151729;
+    --secondaryColor: #777;
+    --blackColor: #000000;
+    --lienerGradient: linear-gradient(90deg, #c50707, #faa000);
+    --transitionLiener: all .4s liner;
+    --transitionEasein: all .4s ease-in-out;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    direction: rtl;
+    font-family: 'vazir';
+}
+
+header {
+    position: fixed;
+    top: 0;
+    right: 0;
+    background: var(--blackColor);
+    color: var(--mainColor);
+    width: 100%;
+    text-align: center;
+}
+
+h2 {
+    padding: 20px 0;
+    font-size: 3rem;
+}
+
+header .progress {
+    width: 100%;
+    height: 10px;
+    background-color: #efefef;
+}
+
+header .progress .progress-bar {
+    width: 0;
+    height: 100%;
+    background: linear-gradient(to right, rgb(184, 2, 216), rgb(255, 0, 43));
+}
+
+section {
+    margin-top: 150px;
+    padding: 50px 100px;
+}
+
+section p {
+    font-size: 1.2rem;
+    line-height: 40px;
+    margin-bottom: 50px;
+}
