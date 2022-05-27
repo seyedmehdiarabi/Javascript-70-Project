@@ -1,0 +1,86 @@
+@font-face {
+    font-family: 'vazir';
+    src: url('../fonts/vazir.eot');
+    src: url('../fonts/vazir.ttf') format('truetype'), url('../fonts/vazir.woff2') format('woff2'), url('../fonts/vazir.woff') format('woff');
+}
+
+ :root {
+    --transitionLiener: all .4s liner;
+    --transitionEasein: all .4s ease-in-out;
+    scroll-behavior: smooth;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    direction: rtl;
+    font-family: 'vazir';
+    display: flex;
+    height: 2000px;
+    background-color: #525252;
+}
+
+.container {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    right: 0;
+    padding: 40px 0;
+    transition: all .3s ease-in-out;
+    -webkit-transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    -ms-transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
+}
+
+header nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header nav ul {
+    display: flex;
+}
+
+header nav ul li {
+    margin-left: 15px;
+}
+
+header a {
+    font-size: 1rem;
+    color: #fff;
+    font-weight: 600;
+}
+
+header.sticky {
+    background: #fff;
+    padding: 5px 0;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+
+header.sticky a {
+    color: #000
+}
+
+.banner {
+    width: 100%;
+    height: 100vh;
+    background: url('../img/1.jpg') no-repeat;
+    background-size: cover;
+}
