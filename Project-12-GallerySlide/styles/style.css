@@ -1,0 +1,142 @@
+    @font-face {
+        font-family: 'vazir';
+        src: url('../fonts/vazir.eot');
+        src: url('../fonts/vazir.ttf') format('truetype'), url('../fonts/vazir.woff2') format('woff2'), url('../fonts/vazir.woff') format('woff');
+    }
+    
+     :root {
+        --bodyColor: #ffffff;
+        --mainColor: #ffffff;
+        --primaryColor: #311B92;
+        --secondaryColor: #777;
+        --blackColor: #000000;
+        --lienerGradient: linear-gradient(90deg, #c50707, #faa000);
+        --transitionLiener: all .4s liner;
+        --transitionEasein: all .4s ease-in-out;
+        scroll-behavior: smooth;
+    }
+    
+    * {
+        margin: 0;
+        padding: 0;
+        outline: none;
+        list-style: none;
+        box-sizing: border-box;
+    }
+    
+    a {
+        text-decoration: none;
+    }
+    
+    body {
+        direction: rtl;
+        font-family: 'vazir';
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        overflow-x: hidden;
+        background-color: var(--mainColor);
+        height: 100vh;
+    }
+    
+    section {
+        width: 100%;
+        height: 100vh;
+        background: #333;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    section .box {
+        position: relative;
+        width: 200px;
+        height: 200px;
+        margin: 10px;
+    }
+    
+    section .box .imgBox {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        cursor: pointer;
+    }
+    
+    section .box .imgBox img {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    
+    section .box .imgBox.active {
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1000;
+    }
+    
+    section .box .imgBox.active img {
+        position: absolute;
+        top: 50px;
+        right: 50px;
+        left: 50px;
+        bottom: 50px;
+        width: calc(100% - 100px);
+        height: calc(100% - 100px);
+        object-fit: cover;
+    }
+    
+    section .box .imgBox .content {
+        position: absolute;
+        bottom: 50px;
+        right: 50px;
+        left: 50px;
+        color: white;
+        padding: 15px;
+        text-align: justify;
+        background-color: rgba(0, 0, 0, .9);
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(200px);
+        -webkit-transform: translateY(200px);
+        -moz-transform: translateY(200px);
+        -ms-transform: translateY(200px);
+        -o-transform: translateY(200px);
+    }
+    
+    section .box .imgBox.active .content {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+        -webkit-transform: translateY(0);
+        -moz-transform: translateY(0);
+        -ms-transform: translateY(0);
+        -o-transform: translateY(0);
+        transition: var(--transitionEasein);
+        -webkit-transition: var(--transitionEasein);
+        -moz-transition: var(--transitionEasein);
+        -ms-transition: var(--transitionEasein);
+        -o-transition: var(--transitionEasein);
+    }
+    
+    section .box .imgBox .content h2 {
+        opacity: 0;
+        visibility: hidden;
+    }
+    
+    section .box .imgBox.active h2 {
+        opacity: 1;
+        visibility: visible;
+        text-align: center;
+        color: white;
+        letter-spacing: .2px;
+        margin-top: 10px;
+    }

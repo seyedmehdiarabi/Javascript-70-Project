@@ -1,0 +1,74 @@
+@font-face {
+    font-family: 'vazir';
+    src: url('../fonts/vazir.eot');
+    src: url('../fonts/vazir.ttf') format('truetype'), url('../fonts/vazir.woff2') format('woff2'), url('../fonts/vazir.woff') format('woff');
+}
+
+:root {
+    --bodyColor: #ffffff;
+    --mainColor: #ffffff;
+    --primaryColor: #311B92;
+    --secondaryColor: #777;
+    --blackColor: #000000;
+    --lienerGradient: linear-gradient(90deg, #c50707, #faa000);
+    --transitionLiener: all .4s liner;
+    --transitionEasein: all .4s ease-in-out;
+    scroll-behavior: smooth;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    direction: rtl;
+    font-family: 'vazir';
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow-x: hidden;
+    background-color: var(--blackColor);
+}
+
+header {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    background: #000;
+}
+
+header #bg {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: url('../img/1.jpg') no-repeat;
+    background-size: cover;
+}
+
+.container {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+section {
+    padding: 100px;
+    text-align: justify;
+    line-height: 35px;
+    color: white;
+}
+
+section h2 {
+    font-size: 40px;
+    margin: 20px 0;
+}
