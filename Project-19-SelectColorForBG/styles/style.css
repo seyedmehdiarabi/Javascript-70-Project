@@ -30,3 +30,13 @@ body {
     align-items: center;
     justify-content: center;
 }
+
+select {
+    padding: 10px 30px;
+    font-family: 'vazir';
+    cursor: pointer;
+}
+
+select option {
+    cursor: pointer;
+}
