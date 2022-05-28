@@ -1,0 +1,69 @@
+@font-face {
+    font-family: 'vazir';
+    src: url('../fonts/vazir.eot');
+    src: url('../fonts/vazir.ttf') format('truetype'), url('../fonts/vazir.woff2') format('woff2'), url('../fonts/vazir.woff') format('woff');
+}
+
+ :root {
+    --transitionLiener: all .4s liner;
+    --transitionEasein: all .4s ease-in-out;
+    scroll-behavior: smooth;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    direction: rtl;
+    font-family: 'vazir';
+    height: 100vh;
+}
+
+.container {
+    width: 700px;
+    margin: 150px auto;
+}
+
+.container .accordion .accordion-title {
+    font-size: 20px;
+    padding: 10px;
+    color: #fff;
+    background-color: #e3193b;
+    border: 2px solid #111;
+    text-align: justify;
+    cursor: pointer;
+}
+
+.container .accordion .accordion-title:before {
+    content: '+';
+    width: 15px;
+    height: 15px;
+    margin-left: 10px;
+}
+
+.container .accordion-content {
+    background: #d3d3d3;
+    line-height: 35px;
+    text-align: justify;
+    height: 0;
+    overflow: hidden;
+    transition: all .3s linear;
+    -webkit-transition: all .3s linear;
+    -moz-transition: all .3s linear;
+    -ms-transition: all .3s linear;
+    -o-transition: all .3s linear;
+}
+
+.active::before {
+    content: '-' !important;
+    margin-left: 16px;
+}
