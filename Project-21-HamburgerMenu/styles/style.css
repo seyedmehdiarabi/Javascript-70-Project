@@ -1,0 +1,187 @@
+@font-face {
+    font-family: 'vazir';
+    src: url('../fonts/vazir.eot');
+    src: url('../fonts/vazir.ttf') format('truetype'), url('../fonts/vazir.woff2') format('woff2'), url('../fonts/vazir.woff') format('woff');
+}
+
+ :root {
+    --transitionLiener: all .4s liner;
+    --transitionEasein: all .4s ease-in-out;
+    scroll-behavior: smooth;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    direction: rtl;
+    font-family: 'vazir';
+    height: 100vh;
+    background: #333;
+    overflow-x: hidden;
+}
+
+.container {
+    width: 100vw;
+    min-height: 100vh;
+    background: #fafafa;
+    padding: 50px;
+    transition: all .3s linear;
+    -webkit-transition: all .3s linear;
+    -moz-transition: all .3s linear;
+    -ms-transition: all .3s linear;
+    -o-transition: all .3s linear;
+    transform-origin: top right;
+}
+
+.circle-container {
+    position: fixed;
+    right: -100px;
+    top: -100px;
+}
+
+.circle-container .circle {
+    width: 200px;
+    height: 200px;
+    background-color: #faa000;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    position: relative;
+    transition: transform .5s linear;
+    -webkit-transition: transform .5s linear;
+    -moz-transition: transform .5s linear;
+    -ms-transition: transform .5s linear;
+    -o-transition: transform .5s linear;
+}
+
+.circle-container .circle button {
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    border: none;
+    background: transparent;
+    color: #fff;
+    cursor: pointer;
+    font-size: 25px;
+    height: 100px;
+}
+
+.circle-container .circle button#open {
+    right: 60%;
+}
+
+.circle-container .circle button#close {
+    top: 40%;
+    transform: rotate(75deg);
+    -webkit-transform: rotate(75deg);
+    -moz-transform: rotate(75deg);
+    -ms-transform: rotate(75deg);
+    -o-transform: rotate(75deg);
+    transform-origin: top right;
+}
+
+.container .content {
+    width: 1000px;
+    margin: 50px auto;
+}
+
+.container .content img {
+    width: 100%;
+}
+
+.container .content small {
+    color: #666666;
+}
+
+.container .content p {
+    line-height: 35px;
+    text-align: justify;
+}
+
+.container .content h3 {
+    padding: 20px 0;
+}
+
+.container.show-nav {
+    transform: rotate(20deg);
+    -webkit-transform: rotate(20deg);
+    -moz-transform: rotate(20deg);
+    -ms-transform: rotate(20deg);
+    -o-transform: rotate(20deg);
+}
+
+.container.show-nav .circle {
+    transform: rotate(-80deg);
+    -webkit-transform: rotate(-80deg);
+    -moz-transform: rotate(-80deg);
+    -ms-transform: rotate(-80deg);
+    -o-transform: rotate(-80deg);
+}
+
+nav {
+    position: fixed;
+    bottom: 50px;
+    right: 30px;
+}
+
+nav ul li {
+    margin: 20px;
+    cursor: pointer;
+    transform: translateX(150%);
+    -webkit-transform: translateX(150%);
+    -moz-transform: translateX(150%);
+    -ms-transform: translateX(150%);
+    -o-transform: translateX(150%);
+    transition: transform .4s linear;
+    -webkit-transition: transform .4s linear;
+    -moz-transition: transform .4s linear;
+    -ms-transition: transform .4s linear;
+    -o-transition: transform .4s linear;
+}
+
+nav ul li a {
+    color: #fff;
+}
+
+nav ul li svg {
+    margin-left: 10px;
+}
+
+.container.show-nav+nav ul li {
+    transform: translateX(0);
+    -webkit-transform: translateX(0);
+    -moz-transform: translateX(0);
+    -ms-transform: translateX(0);
+    -o-transform: translateX(0);
+    transition-delay: .3s;
+}
+
+nav ul li+li {
+    margin-right: 35px;
+    transform: translateX(200%);
+    -webkit-transform: translateX(200%);
+    -moz-transform: translateX(200%);
+    -ms-transform: translateX(200%);
+    -o-transform: translateX(200%);
+}
+
+nav ul li+li+li {
+    margin-right: 60px;
+    transform: translateX(250%);
+    -webkit-transform: translateX(250%);
+    -moz-transform: translateX(250%);
+    -ms-transform: translateX(250%);
+    -o-transform: translateX(250%);
+}
