@@ -1,0 +1,155 @@
+@font-face {
+    font-family: 'vazir';
+    src: url('../fonts/vazir.eot');
+    src: url('../fonts/vazir.ttf') format('truetype'), url('../fonts/vazir.woff2') format('woff2'), url('../fonts/vazir.woff') format('woff');
+}
+
+ :root {
+    --transitionLiener: all .4s liner;
+    --transitionEasein: all .4s ease-in-out;
+    scroll-behavior: smooth;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    direction: rtl;
+    font-family: 'vazir';
+    height: 100vh;
+    background-color: #0259aa;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    width: 90vw;
+    margin: auto;
+}
+
+header {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 8vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header nav ul {
+    width: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header nav a {
+    color: #fff;
+}
+
+.content {
+    width: 100%;
+}
+
+.content .content-box {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row-reverse;
+}
+
+.content .content-box .imgBox {
+    width: 50%;
+}
+
+.content .content-box .imgBox img {
+    width: 100%;
+}
+
+.content .content-box .textBox {
+    width: 50%;
+}
+
+.content .content-box .textBox h2 {
+    color: #fff;
+    font-weight: 900;
+    font-size: 2.2rem;
+}
+
+.content .content-box .textBox h2 span {
+    color: #0ac752;
+}
+
+.content .content-box .textBox p {
+    color: #fff;
+    font-size: .8rem;
+    line-height: 2rem;
+    margin: 20px 0;
+    text-align: justify;
+}
+
+.content .content-box .textBox a {
+    background-color: #0ac752;
+    padding: 10px;
+    color: #fff;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+
+.thumb {
+    display: flex;
+    position: absolute;
+    bottom: 50px;
+    right: 50%;
+    transform: translateX(50%);
+    -webkit-transform: translateX(50%);
+    -moz-transform: translateX(50%);
+    -ms-transform: translateX(50%);
+    -o-transform: translateX(50%);
+}
+
+.thumb li {
+    margin: 0 20px;
+    cursor: pointer;
+}
+
+.thumb li img {
+    width: 150px;
+}
+
+.social {
+    position: absolute;
+    right: 30px;
+}
+
+.social li {
+    margin: 5px 0;
+    text-align: center;
+}
+
+.social a {
+    font-size: 25px;
+    color: #fff;
+}
