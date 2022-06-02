@@ -1,4 +1,4 @@
 const SelectColor = document.querySelector('#select-color')
-SelectColor.addEventListener('change', (e) => {
+SelectColor.addEventListener('change', () => {
     document.body.style.background = SelectColor.value;
 })
