@@ -1,0 +1,113 @@
+@font-face {
+    font-family: 'vazir';
+    src: url('../fonts/vazir.eot');
+    src: url('../fonts/vazir.ttf') format('truetype'), url('../fonts/vazir.woff2') format('woff2'), url('../fonts/vazir.woff') format('woff');
+}
+
+ :root {
+    --transitionLiener: all .4s liner;
+    --transitionEasein: all .4s ease-in-out;
+    scroll-behavior: smooth;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    direction: rtl;
+    font-family: 'vazir';
+    background-color: #1a1a1a;
+}
+
+header{
+width: 100%;
+height: 900px;
+display: flex;
+justify-content: center;
+background: linear-gradient(rgba(255,255,255,.3),rgba(0,0,0,.9)), url('../img//1.jpg');
+object-fit: cover;
+background-size: cover;
+background-position: center;
+}
+header nav{
+    width: 80%;
+    height: 100px;
+    background-color: #6fc704;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    top: 50px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    box-shadow: 0 5px 15px rgba(141,141,141,.9);
+    overflow: hidden;
+    transition: all .6s ease-in-out;
+    -webkit-transition: all .6s ease-in-out;
+    -moz-transition: all .6s ease-in-out;
+    -ms-transition: all .6s ease-in-out;
+    -o-transition: all .6s ease-in-out;
+}
+.sticky{
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+header .logo{
+    width: 15%;
+    height: 100%;
+    background-color: #e5f4fb;
+    clip-path: polygon(0 0, 75% 0, 100% 100%, 0% 100%);
+
+}
+header .logo a{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+header .logo img{
+    width: 65%;
+    object-fit: cover;
+
+}
+header nav .menu{
+    width: 30%;
+    padding: 0 30px;
+}
+header nav ul {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+header nav ul li a{
+    color: #fff;
+    font-size: 1rem;
+}
+section.content{
+    margin-top: 100px;
+    padding: 0 200px;
+    color: #ccc;
+}
+section.content p{
+    margin-bottom: 20px;
+    text-align: justify;
+    line-height: 35px;
+    font-size: 1rem;
+}
