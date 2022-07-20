@@ -1,0 +1,183 @@
+﻿@font-face {
+    font-family: 'vazir';
+    src: url('../fonts/vazir.eot') format('eot'),
+     url('../fonts/vazir.ttf') format('truetype'),
+    url('../fonts/vazir.woff') format('woff'),
+    url('../fonts/vazir.woff2') format('woff2');
+}
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    font-family: 'vazir';
+    direction: rtl;
+    height: 100vh;
+    background: url('../images/1.jpg');
+    background-size: cover;
+}
+
+
+.container{
+    width: 1700px;
+    margin: auto;
+    padding: 0 15px;
+}
+
+header{
+    width: 100%;
+    height: 50px;
+    position: relative;
+    display: flex;
+    background: #111;
+}
+
+header nav{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header nav .logo{
+    color: crimson;
+    font-weight: 900;
+}
+
+header nav #navbar{
+    display: flex;
+    list-style: none;
+}
+
+header nav #navbar li{
+    margin-left: 20px;
+}
+header a{
+    color: #fff;
+    text-decoration: none;
+    padding: 0 25px;
+}
+
+
+header nav #navbar li svg{
+    font-size: 20px;
+    margin-right: 5px;
+    transition: all .3s ease-in-out;
+    -webkit-transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    -ms-transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
+}
+
+.menu-one{
+    position: absolute;
+    width: 100%;
+    right: -100%;
+    top: 50px;
+    background: #fff;
+    transition: all .3s ease-in-out;
+    -webkit-transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    -ms-transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
+    display: flex;
+}
+
+.drop-one:hover .menu-one{
+    right: 0;
+}
+
+.drop-one:hover svg{
+    transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+}
+
+.menu-one ul{
+    text-align: center;
+    flex: 1;
+}
+.menu-one ul li{
+    line-height: 3;
+    list-style: none;
+}
+.menu-one ul li h4{
+    font-size: 20px;
+    color: teal;
+}
+
+.menu-one ul li a{
+    color: #000 !important;
+    padding: 10px 0 !important;
+}
+
+.menu-one ul li img{
+    width: 300px;
+}
+
+.bars{
+    color: #fff;
+    font-size: 35px;
+    transform: rotate(-90deg);
+    -webkit-transform: rotate(-90deg);
+    -moz-transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+    -o-transform: rotate(-90deg);
+    cursor: pointer;
+    display: none;
+}
+
+@media screen and (max-width: 992px){
+    .container{
+        width: 90vw;
+    }
+    header nav #navbar{
+        position: absolute;
+        top: 50px;
+        display: block;
+        width: 100%;
+        background: #222;
+        right: -100%;
+        transition: all .3s ease-in-out;
+        -webkit-transition: all .3s ease-in-out;
+        -moz-transition: all .3s ease-in-out;
+        -ms-transition: all .3s ease-in-out;
+        -o-transition: all .3s ease-in-out;
+}
+    header nav #navbar.active{
+        right: 0;
+    }
+    header nav #navbar li{
+        margin: 15px 0;
+    }
+    .menu-one{
+        right: 0;
+        display: none;
+    }
+
+    .menu-one.show{
+        display: block;
+       top: 0;
+       position: relative;
+    }
+    .drop-one{
+        position: relative;
+    }
+    .bars{
+        display: block;
+        transition: all .3s ease-in-out;
+        -webkit-transition: all .3s ease-in-out;
+        -moz-transition: all .3s ease-in-out;
+        -ms-transition: all .3s ease-in-out;
+        -o-transition: all .3s ease-in-out;
+}
+    .bars.rotate{
+        transform: rotate(0deg);
+        -webkit-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+}
+}
