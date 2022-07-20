@@ -1,0 +1,204 @@
+﻿@font-face {
+    font-family: 'vazir';
+    src: url('../fonts/vazir.eot') format('eot'),
+     url('../fonts/vazir.ttf') format('truetype'),
+    url('../fonts/vazir.woff') format('woff'),
+    url('../fonts/vazir.woff2') format('woff2');
+}
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    font-family: 'vazir';
+    direction: rtl;
+    /* display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; */
+    height: 100vh;
+}
+
+.container{
+    width: 1400px;
+    margin: auto;
+}
+
+.row{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.portfolio{
+    padding: 120px 15px;
+    background-color: #f1f1f1;
+}
+
+
+.portfolio .title{
+    text-align: center;
+    width: 100%;
+    
+}
+.portfolio .title h2{
+    position: relative;
+    padding-bottom: 20px;
+}
+
+.portfolio .title h2::before{
+    content: '';
+    position: absolute;
+    width: 150px;
+    height: 2px;
+    background: #D84315;
+    bottom: 0;
+}
+
+
+.portfolio .tab-menu{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 50px 0;
+}
+
+.portfolio .tab-menu ul{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   
+}
+
+.portfolio .tab-menu ul li{
+    margin: 0 15px;
+    list-style: none;
+    font-size: 18px;
+    cursor: pointer;
+}
+.portfolio .tab-menu ul li.active{
+    color: #D84315;
+    border-bottom: 1px solid #D84315;
+}
+
+.portfolio-gallery{
+    width: 100%;
+    display: flex;
+  
+    justify-content: space-between;
+    flex-wrap: wrap;
+    background-color: #e6e6e6;
+    height: 800px;
+}
+.portfolio-gallery .item{
+    width: 32.33%;
+    margin-top: 10px;
+}
+.portfolio-gallery .item img{
+    width: 100%;
+    height: 350px;
+    display: block;
+}
+
+.portfolio-gallery .item .inner{
+    position: relative;
+}
+
+.portfolio-gallery .item .inner .overlay{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    opacity: 0;
+    transition: all .3s ease-in;
+    -webkit-transition: all .3s ease-in;
+    -moz-transition: all .3s ease-in;
+    -ms-transition: all .3s ease-in;
+    -o-transition: all .3s ease-in;
+}
+.portfolio-gallery .item:hover .overlay{
+    opacity: 1;
+}
+
+.portfolio-gallery .item .inner .overlay svg{
+    color: #fff;
+    display: block;
+    width: 30px;
+    height: 30px;
+    background-color: #D84315;
+    padding: 10px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+
+.portfolio-gallery .item .inner .overlay h3{
+    color: #fff;
+    margin-top: 15px;
+    font-size: 25px;
+    transform: translateY(30px);
+    -webkit-transform: translateY(30px);
+    -moz-transform: translateY(30px);
+    -ms-transform: translateY(30px);
+    -o-transform: translateY(30px);
+    transition: all .3s ease-in-out;
+    -webkit-transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    -ms-transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
+}
+
+.portfolio-gallery .item:hover .inner .overlay h3{
+    transform: translateY(0);
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -o-transform: translateY(0);
+}
+
+.lightBox{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,.5);
+    display: none;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.lightBox.show{
+    display: flex;
+}
+
+.lightBox img{
+    width: 80%;
+    height: 80%;
+}
+
+.lightBox svg{
+    position: absolute;
+    top: 50px;
+    left: 50px;
+    width: 50px;
+    height: 50px;
+    font-size: 30px;
+    background-color: #D84315;
+    padding: 5px 15px;
+    color: #fff;
+    cursor: pointer;
+}
