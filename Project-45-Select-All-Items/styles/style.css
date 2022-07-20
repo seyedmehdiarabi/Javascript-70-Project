@@ -1,0 +1,95 @@
+﻿@font-face {
+    font-family: 'vazir';
+    src: url('../fonts/vazir.eot') format('eot'),
+     url('../fonts/vazir.ttf') format('truetype'),
+    url('../fonts/vazir.woff') format('woff'),
+    url('../fonts/vazir.woff2') format('woff2');
+}
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    font-family: 'vazir';
+    direction: rtl;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+section{
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+
+section h1{
+    margin-bottom: 30px;
+}
+
+section table{
+    margin: auto;
+    color: #757575;
+    background-color: #fff;
+    width: 100%;
+    border-collapse: collapse;
+}
+
+section table tr{
+    border: 1px solid #757575;
+}
+
+section table tr td{
+    padding: 10px 5px;
+}
+
+section table input{
+    width: 20px;
+    height: 20px;
+    margin-left: 10px;
+    cursor: pointer;
+   
+}
+
+.fa-trash{
+    color: #c00;
+}
+
+.fa-edit{
+    color: green;
+}
+
+
+button{
+    border: none;
+    padding: 10px;
+    background: #c00;
+    color: #fff;
+    font-family: 'vazir';
+    margin-top: 20px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    cursor: pointer;
+    visibility: hidden;
+    opacity: 0;
+    transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    -moz-transition: all .4s ease-in-out;
+    -ms-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+}
+
+.active{
+    visibility: visible;
+    opacity: 1; 
+}
+
+button svg{
+    color: #fff !important;
+}
